@@ -1,4 +1,7 @@
 /* Funciones de Utilidad */
+import PromptSync from "prompt-sync";
+
+const prompt = PromptSync()
 
 const centrar = (texto = "", largo = 0) => {
     let relleno =(largo - texto.length) / 2
@@ -16,4 +19,18 @@ const encabezado = (titulo = " ", largo = 0) => {
     linea(largo)
 }
 
-export {linea, encabezado}
+const leerNumero = (msj = "") => { 
+    let numero = 0
+    while (true) {
+        
+        numero = Number(prompt(msj + ": "))
+        if (!Number.isNaN(numero) && Number.isFinite(numero)) {
+            return numero
+        } else { 
+            console.error("Debe escribir un numero...")
+        }
+    }
+}
+
+
+export {linea, encabezado, leerNumero}
