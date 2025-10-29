@@ -1,15 +1,16 @@
 /* Programa de Registro de alumnos */
+
 import {encabezado, linea, capital} from "./utilidades.js";
 
 const main = () => {
     // Definir variables
     let cedula = "24.022.741"
-    let nombre = "carmen"
+    let nombre = "olivia"
     let apellido = "lopez"
-    let edad = 25
+    let edad = 22
     let altura = 1.67
     let sexo = true // true = Femenino y false = Masculino
-    let turno = 2 // 1 = Mañana , 2 = Tarde , 3 = Noche
+    let turno = 3 // 1 = Mañana , 2 = Tarde , 3 = Noche
 
     verDatos(cedula, nombre, apellido, edad, altura, sexo, turno)
 } 
