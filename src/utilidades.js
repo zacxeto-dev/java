@@ -32,5 +32,22 @@ const leerNumero = (msj = "") => {
     }
 }
 
+const capital = (texto = "") => {
+    return texto.charAt(0).toUpperCase() + texto.slice(1).toLowerCase()
 
-export {linea, encabezado, leerNumero}
+}
+
+const leerTexto = (msj = "", aviso = "") => {
+    let texto = ""
+    while (true) {
+        texto = prompt(msj + ": ")
+        if (texto.trim() != "") {
+            return texto.trim()
+        } else {
+            console.error(`Debe escribir ${aviso}...`)
+        }
+    }
+}
+
+
+export {linea, encabezado, leerNumero, capital, leerTexto}
