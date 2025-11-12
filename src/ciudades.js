@@ -1,4 +1,5 @@
 /* Array de ciudades ingresada por teclado */
+
 import * as util from "./utilidades.js";
 
 const main = () => {
@@ -26,17 +27,14 @@ const main = () => {
 
     verCiudades(ciudades, "Mostrar ciudades", 46)
 
-    util.encabezado("Ciudades ordenadas ascendentes",46)
-    ciudades
-    .sort()
-    .forEach((ciudad) => console.log(`La ciudad es ${ciudad.toUpperCase()}`));
-
-    util.encabezado("Ciudades ordennadas descendentes",46)
-    ciudades
-    .sort((a, b) => b.localeCompare(a))
-    .forEach((ciudad) => console.log(`La ciudad es ${ciudad.toUpperCase()}`))
-
+    ciudades.sort()
+    verCiudades(ciudades,"Ciudades ordenadas ascendentes",46)
     
+    
+    ciudades.sort((a, b) => b.localeCompare(a))
+    verCiudades(ciudades,"Ciudades ordennadas descendentes",46)
+    
+
 }
 
 const verCiudades = (ciudades = [], titulo = "", largo = 0) => {
